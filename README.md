@@ -1,5 +1,3 @@
-> simple blog develop by golang
-
 ## Requirement
 
 go 1.11 with go mudules
