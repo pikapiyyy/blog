@@ -1,9 +1,8 @@
 ## Requirement
 
 ```
-go 1.11 with go mudules
 github.com/gorilla/context
-github.com/jinzhu/gorm/dialects/mysql
+github.com/go-sql-driver/mysql
 github.com/gorilla/sessions
 github.com/jinzhu/gorm
 github.com/spf13/viper
