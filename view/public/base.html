@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        {{if .Title}}
+            <title>{{.Title}} - blog</title>
+        {{else}}
+            <title>Welcome to blog!</title>
+        {{end}}
+    </head>
+    <body>
+        <div>
+            Blog: 
+            <a href="/">Home</a>
+            {{if .CurrentUser}}
+              <a href="/logout">Logout</a>
+            {{else}}
+              <a href="/login">Login</a>
+            {{end}}
+        </div>
+        {{template "content" .}}
+        {{if .Errs}}
+            <ul>
+                {{range .Errs}}
+                    <li>{{.}}</li>
+                 {{end}}
+            </ul>
+        {{end}}
+    </body>
+</html>
