@@ -11,6 +11,13 @@ github.com/spf13/viper
 
 ## Get Started
 
+### clone
+
+```
+cd $GOPATH/src
+git clone git@github.com:pikapiyyy/blog.git
+```
+
 ### go mod tidy
 
 Before install required package,you need make your `go mod` can be used which means your go version must upper or equal than 1.11.
