@@ -1,9 +1,11 @@
+// 表单验证基础
 package validate
 
 import (
 	"fmt"
 )
 
+// 验证字符串长度
 func checkLen(fieldName, fieldValue string, minLen, maxLen int) string {
 	lenField := len(fieldValue)
 	if lenField < minLen {
