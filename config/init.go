@@ -20,7 +20,6 @@ func getConfig(projectName string) {
 	err := viper.ReadInConfig()
 	// Handle errors reading the config file
 	if err != nil {
-		fmt.Println("这里这里")
 		panic(fmt.Errorf("Fatal error config file: %s", err))
 	}
 }

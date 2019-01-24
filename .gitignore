@@ -1,2 +1,5 @@
 /.idea
 /config.yml
+/app.log
+/blog
+/nohup.out

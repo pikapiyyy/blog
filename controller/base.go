@@ -10,6 +10,7 @@ var (
 	indexController    index
 	loginController    login
 	registerController register
+	profileController  profile
 	templates          map[string]*template.Template
 )
 
@@ -21,4 +22,5 @@ func Startup() {
 	indexController.registerRoutes()
 	loginController.registerRoutes()
 	registerController.registerRoutes()
+	profileController.registerRoutes()
 }

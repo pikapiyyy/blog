@@ -1,7 +1,6 @@
 package controller
 
 import (
-	"log"
 	"net/http"
 
 	"blog/model"
@@ -37,14 +36,12 @@ func registerHandle(w http.ResponseWriter, r *http.Request) {
 			}
 		}
 
-		log.Println(v.Errs)
 		if len(v.Errs) > 0 {
 			templates["register.html"].Execute(w, &v)
 			return
 		}
 
 		if err := model.AddUser(username, pwd1, email); err != nil {
-			log.Println("add User error:", err)
 			w.Write([]byte("Error insert database"))
 			return
 		}

@@ -3,7 +3,6 @@ package util
 
 import (
 	"errors"
-	"fmt"
 	"net/http"
 
 	"github.com/gorilla/sessions"
@@ -29,12 +28,10 @@ func GetSessionUser(r *http.Request) (string, error) {
 	}
 
 	val := session.Values["user"]
-	fmt.Println("val:", val)
 	username, ok := val.(string)
 	if !ok {
 		return "", errors.New("can not get session user")
 	}
-	fmt.Println("username:", username)
 	return username, nil
 }
 
